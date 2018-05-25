@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.body{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	z-index: -2;
+}
+
+.grad{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: -1;
+	opacity: 0.7;
+}
+.myButton {
+    position: fixed; /* or position: absolute; */
+    top: 5px;
+    right: 5px;
+}
+
+.header{
+	position: absolute;
+	top: calc(50% - 250px);
+	left: calc(50% - 350px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 50px;
+	font-weight: 200;
+	margin-right: 350px;
+}
+
+.header div span{
+	color: #5379fa !important;
+}
+
+.form-group{
+        width:300px;
+        margin-top: 200px;
+        margin-left: calc(50% - 175px);
+    }
+    .form-control{
+        margin-top: 20px;
+    }
+.btn-primary{
+    width : 750px;
+}
+.issue{
+    margin-top: 200px;
+    margin-left: calc(50% - 375px);
+    margin-right: calc(50% - 375px);
+}
+.logo
+{
+	margin-left: 20px;
+	margin-top: 20px;
+}
+</style>
+<script src="js/tokenForm.js"></script>
+<script src="js/Cookies.js"></script>
+
+
+ </head>
+
+<body>
+		<div class="body"></div>
+		<div class="grad">
+				<img src="http://www.skit.ac.in/images/skit-logo.png" class="logo">
+		</div>
+<div class="container">
+  <button type="button" class="myButton btn btn-danger" onclick="logout()"><span class="glyphicon glyphicon-log-out"></span>Logout</button>
+</div>
+<div id="myid"></div>
+<div id="myid1" class="issue"></div>
+<script>
+var sess =  Cookies.get('sess');
+  console.log(sess);
+  var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+  xmlhttp.open("GET", "http://localhost:8080/OHD/token",true);
+  xmlhttp.setRequestHeader("sess",sess);
+  xmlhttp.send();
+  xmlhttp.onreadystatechange = function(){
+   
+      if (xmlhttp.readyState == 4  ){
+         // Javascript function JSON.parse to parse JSON data
+         let jsonObj = JSON.parse(xmlhttp.responseText);
+           console.log(jsonObj);
+           let inHtml="";
+           for(i=0;i<jsonObj.length;i++){
+             inHtml+="<button type='button' class='btn btn-primary btn-block' data-toggle='collapse' data-target='#"+jsonObj[i].ID+"'>Id : "+jsonObj[i].ID+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Room No. : "+jsonObj[i].ROOM_ID+" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Status : "+jsonObj[i].STATUS+"</button>"+
+             "<div id='"+jsonObj[i].ID+"' class='collapse'>"+jsonObj[i].DESCRIPTION+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Date : "+jsonObj[i].DATE+
+			  "    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			 if(jsonObj[i].STATUS=="reported"){ 
+			  inHtml+="<button type='button' class='btn btn-info' onclick=resolveIssue('"+jsonObj[i].ID+"') disabled>Resolve Issue</button>"+
+			 "</div>";
+			}
+			else{
+				inHtml+="<button type='button' class='btn btn-info' onclick=resolveIssue('"+jsonObj[i].ID+"') >Resolve Issue</button>"+
+			 "</div>";
+			}
+           }
+           document.getElementById("myid").innerHTML="";
+           document.getElementById("myid1").innerHTML=inHtml;
+           
+      }
+   }
+</script>
+
+</body>
+
+
+</html>

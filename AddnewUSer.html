@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+.myButton {
+    position: fixed; /* or position: absolute; */
+    top: 100px;
+    right: 550px;
+	
+}
+.myButton1 {
+    position: fixed; /* or position: absolute; */
+    top: 150px;
+    right: 550px;
+	
+}
+
+.myButton2 {
+    position: fixed; /* or position: absolute; */
+    top: 200px;
+    right: 550px;
+	
+}
+.Description{
+   position: fixed; /* or position: absolute; */
+    top: 250px;
+    right: 770px;
+
+}
+.textarea{
+   position: fixed; /* or position: absolute; */
+    top: 300px;
+    right: 550px;
+}
+.Button{
+   position: fixed; /* or position: absolute; */
+    top: 500px;
+    right: 550px;
+
+.header{
+	position: absolute;
+	top: calc(50% - 500px);
+	left: calc(50% - 500px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 50px;
+	font-weight: 200;
+	margin-right: 350px;
+}
+
+.header div span{
+	color: #5379fa !important;
+}
+</style>
+ </head>
+
+<body>
+<div class="container" align="center">
+<table>
+<tr>
+<div class="form-group" style= "width:350px" >
+<td><label for="name">Id:</label></td>
+<td><input type= "text" class="form-control" id="id"></td>
+ </tr>
+ </div>
+ 
+ <tr>
+<div class="form-group" style= "width:350px">
+<td><label for="name">Name:</label></td>
+<td><input type= "text" class="form-control" id="name"></td>
+</tr> </div>
+ <tr>
+<div class="form-group" style= "width:350px">
+<td><label for="email">Email:</label></td>
+<td><input type= "text" class="form-control" id="email"></td>
+</tr> </div>
+ 
+ <tr>
+<div class="form-group" style= "width:350px">
+<td><label for="name">Phone:</label></td>
+<td><input type= "text" class="form-control" id="phone"></td>
+</tr> </div>
+ 
+ <tr>
+<div class="form-group" style= "width:350px">
+<td><label for="name">Password:</label></td>
+<td><input type= "password" class="form-control" id="password"></td>
+</tr> </div>
+
+ <tr>
+<td><label for="name">Type:</label></td>
+  <div class=" dropdown" style= "width:350px">
+<td>    <button class="btn btn-default dropdown-toggle" style="width: 500px;" type="button" id="menu1" data-toggle="dropdown">Choose Type
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">User</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Facilitator</a></li>
+      </ul>
+  </td>
+  </tr>
+  </div>
+   </table>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+.myButton {
+    position: fixed; /* or position: absolute; */
+    top: 100px;
+    right: 550px;
+	
+}
+.myButton1 {
+    position: fixed; /* or position: absolute; */
+    top: 150px;
+    right: 550px;
+	
+}
+
+.myButton2 {
+    position: fixed; /* or position: absolute; */
+    top: 200px;
+    right: 550px;
+	
+}
+.Description{
+   position: fixed; /* or position: absolute; */
+    top: 250px;
+    right: 770px;
+
+}
+.textarea{
+   position: fixed; /* or position: absolute; */
+    top: 300px;
+    right: 550px;
+}
+.Button{
+   position: fixed; /* or position: absolute; */
+    top: 500px;
+    right: 550px;
+
+.header{
+	position: absolute;
+	top: calc(50% - 500px);
+	left: calc(50% - 500px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 50px;
+	font-weight: 200;
+	margin-right: 350px;
+}
+
+.header div span{
+	color: #5379fa !important;
+}
+</style>
+ </head>
+
+<body>
+<div class="form-group">
+<table >
+<tr>
+<td style="width: 100px;"><label for="name">Id:</label></td>
+<td style="width: 300px;"><input type= "text" class="form-control" id="id"></td>
+ </tr>
+ 
+ <tr>
+<td><label for="name">Name:</label></td>
+<td><input type= "text" class="form-control" id="name"></td>
+</tr>  
+<tr>
+<td><label for="email">Email:</label></td>
+<td><input type= "text" class="form-control" id="email"></td>
+</tr>
+ 
+ <tr>
+<td><label for="name">Phone:</label></td>
+<td><input type= "text" class="form-control" id="phone"></td>
+</tr>
+ 
+ <tr>
+<td><label for="name">Password:</label></td>
+<td><input type= "password" class="form-control" id="password"></td>
+</tr> 
+
+ <tr>
+<td><label for="name">Type:</label></td>
+<td>  
+            <select class="form-control" id="sel1" onselect="">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+  </td>
+  </tr>
+   </table>
+   <button type='button' class='btn btn-success' onclick='submitToken()'>Submit</button>
+</div>
+</body>
+</html>

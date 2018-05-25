@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.body{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	z-index: -2;
+}
+
+.grad{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: -1;
+	opacity: 0.7;
+}
+
+.myButton {
+    position: fixed; /* or position: absolute; */
+    top: 5px;
+    right: 5px;
+}
+.header{
+	position: absolute;
+	top: calc(50% - 250px);
+	left: calc(50% - 400px);
+	z-index: 0;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 50px;
+	font-weight: 200;
+	margin-right: 270px;
+}
+
+.header div span{
+	color: #5379fa !important;
+}
+.userF{
+    margin-top: 250px;
+    margin-left: calc(50% - 375px);
+    margin-right: calc(50% - 375px);
+	z-index: 0;
+}
+.form-group{
+        width:300px;
+        margin-top: 200px;
+        margin-left: calc(50% - 175px);
+    }
+    .form-control{
+        margin-top: 20px;
+    }
+	.btn-primary{
+    width : 750px;
+}
+.logo
+{
+	margin-left: 20px;
+	margin-top: 20px;
+}
+</style>
+<script src="js/Cookies.js"></script>
+<script src="js/adminScript.js"></script>
+ </head>
+
+<body>
+		<div class="body"></div>
+		<div class="grad">
+				<img src="http://www.skit.ac.in/images/skit-logo.png" class="logo">					
+		</div>
+   
+  <button type="button" class="myButton btn btn-danger" onclick="logout()"><span class="glyphicon glyphicon-log-out"></span>Logout</button>
+  <div class="header"> 
+		<div>
+		 <button type="button" class="btn btn-info btn-lg" style = "width: 200px;" onclick="userForm()">Create User</button>
+		 </div>
+		 <!-- <div>
+			<button type="button" class="btn btn-info btn-lg" style = "width: 200px;" onclick="">View Reported User</button>
+			</div> -->
+			<div>
+		<button type="button" class="btn btn-info btn-lg" style = "width: 200px;" onclick="viewUsers()">Manage User</button>
+			</div>
+		 <div>
+		  <button type="button" class="btn btn-info btn-lg" style = "width :200px;" onclick="reportedIssues()">View Reported Issue </button>
+		 
+		  </div>
+		  </div>
+		  <div id="myid"></div>
+		  <div id="myid1" class="userF"></div>
+</body>
+</html>

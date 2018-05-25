@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+.myButton3 {
+    position: fixed; /* or position: absolute; */
+    top: 100px;
+    right: 550px;
+	
+}
+.myButton1 {
+    position: fixed; /* or position: absolute; */
+    top: 150px;
+    right: 550px;
+	
+}
+
+.myButton2 {
+    position: fixed; /* or position: absolute; */
+    top: 200px;
+    right: 550px;
+	
+}
+.Description{
+   position: fixed; /* or position: absolute; */
+    top: 250px;
+    right: 770px;
+
+}
+.textarea{
+   position: fixed; /* or position: absolute; */
+    top: 300px;
+    right: 550px;
+}
+.Button{
+   position: fixed; /* or position: absolute; */
+    top: 500px;
+    right: 550px;
+
+.header{
+	position: absolute;
+	top: calc(50% - 500px);
+	left: calc(50% - 500px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 50px;
+	font-weight: 200;
+	margin-right: 350px;
+}
+
+.header div span{
+	color: #5379fa !important;
+}
+</style>
+ </head>
+
+<body>
+
+<div class="myButton3 dropdown">
+    <button class="btn btn-default dropdown-toggle" style="width: 300px;" type="button" id="menu1" data-toggle="dropdown">Choose Block
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+    </ul>
+  </div>
+  <div class="myButton1 dropdown">
+    <button class="btn btn-default dropdown-toggle" style="width: 300px;" type="button" id="menu1" data-toggle="dropdown">Choose Place
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+    </ul>
+  </div>
+  <div class="myButton2 dropdown">
+    <button class="btn btn-default dropdown-toggle" style="width: 300px;" type="button" id="menu1" data-toggle="dropdown">Choose Problem Type
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+    </ul>
+  </div>
+<div class="container">
+
+<label for="description comment" class="Description">Description:</label>
+  <div class="textarea form-group">
+  <textarea class=" form-control" rows="7" id="comment"></textarea>
+ <button type="button" class="Button btn btn-warning" style = "width: 290px;" >Submit</button>
+  </div>
+ 
+</body>
+</html>
